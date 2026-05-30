@@ -4,7 +4,7 @@ from django.db import models
 class Document(models.Model):
 
     application = models.ForeignKey(
-        "applications.application",
+        "applications.Application",
         on_delete=models.CASCADE,
         related_name="documents"
     )

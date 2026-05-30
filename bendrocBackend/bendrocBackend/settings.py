@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'applications',
     'application_types',
     'documents',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

@@ -15,12 +15,12 @@ class Application(models.Model):
     ]
 
     user = models.ForeignKey(
-        settings.Auth_USER_MODEL,
+        settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE
     )
 
     application_type = models.ForeignKey(
-        "application_type.ApplicationType", 
+        "application_types.ApplicationType", 
         on_delete=models.PROTECT
     )
 

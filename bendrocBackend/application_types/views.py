@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from rest_framework import generics
 
-# Create your views here.
+from .models import ApplicationType
+from .serializers import ApplicationTypeSerializer
+
+
+class ApplicationTypeListView(generics.ListAPIView):
+    queryset = ApplicationType.objects.filter(is_active=True)
+    serializer_class = ApplicationTypeSerializer

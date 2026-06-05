@@ -1,3 +1,11 @@
 from django.urls import path
 
-urlpatterns = [] 
+from .views import PaymentListCreateView
+
+urlpatterns = [
+    path(
+        "",
+        PaymentListCreateView.as_view(),
+        name="payments"
+    ),
+]
